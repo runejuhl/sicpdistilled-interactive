@@ -3,7 +3,7 @@
   %head
     %meta{charset: "utf-8"}
     %meta{content: "IE=edge,chrome=1", :'http-equiv' => 'X-UA-Compatible'}
-    %meta{name: "viewport", content:"width=device-width; initial-scale=1"}
+    %meta{name: "viewport", content:"width=device-width, initial-scale=1"}
     %title= current_page.data.title || 'SICP Distilled'
     %link{ href: "http://fonts.googleapis.com/css?family=Droid+Serif", rel: 'stylesheet', type:'text/css' }
     = stylesheet_link_tag "all"
@@ -13,152 +13,153 @@
 %body
   .menu--mobile.js-mobile-nav{:'data-target' => "menu", } Menu
   .menu
-    %a{href: '/'}
-      %img.logo{ src: '/images/sicp2.jpg', alt: "SICP Distilled"}
+    = link_to "#{http_prefix}/" do
+      = image_tag 'sicp2.jpg', alt: "SICP Distilled", class: 'logo'
+
     %h1.menu__title.done
-      %a{href: '/'}
+      = link_to "#{http_prefix}/" do
         SICP Distilled
     %ul.menu__list
       %li.done
-        %a{href: '/section/licence'}
-          %img{alt:"CC by-sa", style:"border-width:0", src: "https://i.creativecommons.org/l/by-sa/4.0/88x31.png"}
-          Licence
+        = link_to "#{http_prefix}/section/licence" do
+          = image_tag 'https://i.creativecommons.org/l/by-sa/4.0/88x31.png', alt: "CC by-sa", style: 'border-width: 0'
+          License
       %li.done
-        %a{href: '/section/donate'}
-          %img{alt:"MSF ", style:"border-width:0", src: "/images/msf.jpg", width: '88px'}
+        = link_to '#{http_prefix}/section/donate' do
+          = image_tag 'msf.jpg', alt: "MSF", width: '88px'
           Donate
     %h2 Ch1 - Building Abstractions With Functions
     %ul.menu__list
       %li.done
-        %a{href: '/section/1-distilled'}
+        = link_to "#{http_prefix}/section/1-distilled" do
           Chapter 1 Distilled
 
       %li.done
-        %a{href: '/section/1-intro'}
+        = link_to "#{http_prefix}/section/1-intro" do
           Introduction
       %li.done
-        %a{href: '/section/1.1'}
+        = link_to "#{http_prefix}/section/1.1" do
           1.1 - The Elements Of Programming
       %ul.menu__list_2
         %li.done
-          %a{ href: '/section/1.1.1' }
+          = link_to "#{http_prefix}/section/1.1.1"  do
             Expressions
         %li.done
-          %a{ href: '/section/1.1.2' }
+          = link_to "#{http_prefix}/section/1.1.2"  do
             Naming and the Environment
         %li.done
-          %a{ href: '/section/1.1.3' }
+          = link_to "#{http_prefix}/section/1.1.3"  do
             Evaluating Combinations
         %li.done
-          %a{ href: '/section/1.1.4' }
+          = link_to "#{http_prefix}/section/1.1.4"  do
             Defining New Functions
         %li.done
-          %a{ href: '/section/1.1.5' }
+          = link_to "#{http_prefix}/section/1.1.5"  do
             The Substitution Model
         %li.done
-          %a{ href: '/section/1.1-exercises' }
+          = link_to "#{http_prefix}/section/1.1-exercises"  do
             Exercises
         %li.done
-          %a{ href: '/section/1.1.6a' }
+          = link_to "#{http_prefix}/section/1.1.6a"  do
             Predicates
         %li.done
-          %a{ href: '/section/1.1.6b' }
+          = link_to "#{http_prefix}/section/1.1.6b"  do
             Conditional Expressions
         %li.done
-          %a{ href: '/section/1.1.7' }
+          = link_to "#{http_prefix}/section/1.1.7"  do
             Example: Newton’s Method
         %li.done
-          %a{ href: '/section/1.1.8' }
+          = link_to "#{http_prefix}/section/1.1.8"  do
             Functions as Black-Box Abstractions
       %li.done
-        %a{href: '/section/1.2'}
+        = link_to "#{http_prefix}/section/1.2" do
           1.2 - Procedures and the Processes They Generate
       %ul.menu__list_2
         %li.done
-          %a{ href: '/section/1.2.1' }
+          = link_to "#{http_prefix}/section/1.2.1"  do
             Linear Recursion and Iteration
         %li.done
-          %a{ href: '/section/1.2.2' }
+          = link_to "#{http_prefix}/section/1.2.2"  do
             Tree Recursion
         %li.done
-          %a{ href: '/section/1.2.3' }
+          = link_to "#{http_prefix}/section/1.2.3"  do
             Orders of Growth
         %li.done
-          %a{ href: '/section/1.2.4' }
+          = link_to "#{http_prefix}/section/1.2.4"  do
             Exponentiation
         %il.done
-          %a{ href: '/section/1.2.5' }
+          = link_to "#{http_prefix}/section/1.2.5"  do
             Greatest Common Divisors
         %li.done
-          %a{ href: '/section/1.2.6' }
+          = link_to "#{http_prefix}/section/1.2.6"  do
             Example: Testing For Primality
       %li.done
-        %a{href: '/section/1.3-higher-order'}
+        = link_to "#{http_prefix}/section/1.3-higher-order" do
           1.3 Higher Order Functions
       %li.done
-        %a{ href: '/section/project-blackjack' }
+        = link_to "#{http_prefix}/section/project-blackjack"  do
           Project - Blackjack
     %h2 Ch2 - Building Abstractions With Data
     %ul.menu__list
       %li.done
-        %a{href: '/section/2-distilled'}
+        = link_to "#{http_prefix}/section/2-distilled" do
           Chapter 2 Distilled
       %li.done
-        %a{href: '/section/2-intro'}
+        = link_to "#{http_prefix}/section/2-intro" do
           Introduction
       %li.done
-        %a{href: '/section/2-data-abstraction'}
+        = link_to "#{http_prefix}/section/2-data-abstraction" do
           Data Abstraction
       %li.done
-        %a{href: '/section/2-nothing'}
+        = link_to "#{http_prefix}/section/2-nothing" do
           Everything From Nothing
       %li.done
-        %a{href: '/section/2-abstractions'}
+        = link_to "#{http_prefix}/section/2-abstractions" do
           Abstractions In Clojure
       %li
-        %a{href: '/section/2-data-structures'}
+        = link_to "#{http_prefix}/section/2-data-structures" do
           Clojure's Data Structures
       %li
-        %a{href: '/section/2-data-abstraction-clj'}
+        = link_to "#{http_prefix}/section/2-data-abstraction-clj" do
           Data Abstraction, Revisited
       %li.done
-        %a{href: '/section/2-escher'}
+        = link_to "#{http_prefix}/section/2-escher" do
           Escher
       %li.done
-        %a{href: '/section/project-escher'}
+        = link_to "#{http_prefix}/section/project-escher" do
           Project - Escher
       %li.done
-        %a{href: '/section/2-symbolic'}
+        = link_to "#{http_prefix}/section/2-symbolic" do
           Symbolic Data
       %li
-        %a{href: '/section/2-sets'}
+        = link_to "#{http_prefix}/section/2-sets" do
           Representing Sets
       %li
-        %a{href: '/section/2-escher'}
+        = link_to "#{http_prefix}/section/2-escher" do
           Huffman Encoding Trees
       %li
-        %a{href: '/section/2-zippers'}
+        = link_to "#{http_prefix}/section/2-zippers" do
           Zippers
     %h2 Ch3 - Modularity, Objects, and State
     %h2 Ch4 - Metalinguistic Abstraction
     %ul.menu__list
       %li.done
-        %a{href: '/section/4.1'}
+        = link_to "#{http_prefix}/section/4.1" do
           4.1 - The Metacircular Evaluator
       %li.done
-        %a{href: '/section/halting'}
+        = link_to "#{http_prefix}/section/halting" do
           The Halting Problem
       %li
-        %a{href: '/section/y'}
+        = link_to "#{http_prefix}/section/y" do
           The Y Combinator
       %li
-        %a{href: '/section/4.2'}
+        = link_to "#{http_prefix}/section/4.2" do
           4.2 - Lazy Evaluation
       %li
-        %a{href: '/section/4.3'}
+        = link_to "#{http_prefix}/section/4.3" do
           4.3 - Nondeterministic Computing
       %li
-        %a{href: '/section/4.4'}
+        = link_to "#{http_prefix}/section/4.4" do
           4.4 - Logic Programming
 
   .container.menu--push

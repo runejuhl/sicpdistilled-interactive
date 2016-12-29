@@ -10,7 +10,7 @@ $$
 
 In general, the Fibonacci numbers can be defined by the rule
 
-<img src="/images/fibdef.png" width="100%">
+<%= image_tag "fibdef.png", width: "100%" %>
 
 We can immediately translate this definition into a recursive procedure
 for computing Fibonacci numbers:
@@ -39,7 +39,7 @@ hard to show that the number of times the procedure will compute `(fib
 is precisely `Fib(n + 1)`. To get an idea of how bad this is, one can
 show that the value of `Fib(n)` grows exponentially with `n`
 
-<img src="/images/fib5.png" width="100%">
+<%= image_tag "fib5.png", width: "100%" %>
 
 Thus, the process uses a number of steps that grows exponentially with
 the input. On the other hand, the space required grows only linearly
@@ -103,7 +103,7 @@ with the input.
 # Ex 1.11
 A function f is defined by the rule that
 
-<img src="/images/ex1.11.png" width="100%">
+<%= image_tag "ex1.11.png", width: "100%" %>
 
 Write a procedure that computes f by means of
 

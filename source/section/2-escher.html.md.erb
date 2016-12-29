@@ -1,7 +1,7 @@
 # Creating A Language Of Pictures
 ## How to describe Escher?
 
-<img src="/images/SquareLimit500.jpg" width="450">
+<%= image_tag "SquareLimit500.jpg", width: "450px" %>
 
 This section presents a simple language for drawing pictures that
 illustrates the power of data abstraction and closure, and also
@@ -21,7 +21,7 @@ Henderson 1982)
 ## Our first picture
 Here is our first picture, a stick man we will call George.
 
-<img src="/images/1.png" width="400">
+<%= image_tag "1.png", width: "400px" %>
 
 ```clojure
 (draw george)
@@ -32,27 +32,27 @@ We have used a function, `draw`, to draw the picture.
 Now another picture, made using a function called `beside` that takes
 two pictures and combines them left to right.
 
-<img src="/images/2.png" width="500">
+<%= image_tag "/images/2.png", width: "500px" %>
 
 ```clojure
 (draw (beside george george))
 ```
 
 
-<img src="/images/3.png" width="500">
+<%= image_tag "3.png", width: "500px" %>
 
 ```clojure
 (draw (beside george (flip-horiz george)))
 ```
 
-<img src="/images/4.png" width="500">
+<%= image_tag "4.png", width: "500px" %>
 
 ```clojure
 (draw (above (beside george (flip-horiz george))
              (beside george (flip-horiz george))))
 ```
 
-<img src="/images/5.png" width="500">
+<%= image_tag "5.png", width: "500px" %>
 
 ```clojure
 (draw (rotate george))
@@ -78,7 +78,8 @@ ourselves.
   )
 ```
 
-`above` is left as an exercise, see the [project](/section/project-escher)
+`above` is left as an exercise, see the
+[project](<%= config[:http_prefix] %>/section/project-escher)
 
 We can even use recursive functions to draw more complex pictures:
 
@@ -92,9 +93,9 @@ We can even use recursive functions to draw more complex pictures:
       (beside p (above smaller smaller)))))
 ```
 
-<img src="/images/right-split.png" width="400">
+<%= image_tag "right-split.png", width: "400px" %>
 
-<img src="/images/right-split-george.png" width="500">
+<%= image_tag "right-split-george.png", width: "500px" %>
 
 ```clojure
 (draw (right-split george 4))
@@ -117,9 +118,9 @@ We can even use recursive functions to draw more complex pictures:
               (above top-right bottom-right)))))
 ```
 
-<img src="/images/corner-split.png" width="400">
+<%= image_tag "corner-split.png", width: "400px" %>
 
-<img src="/images/corner-split-george.png" width="500">
+<%= image_tag "corner-split-george.png", width: "500px" %>
 
 ```clojure
 (draw (corner-split george 4))
@@ -133,7 +134,7 @@ We can even use recursive functions to draw more complex pictures:
          (beside p3 p4)))
 ```
 
-<img src="/images/quartet.png" width="400">
+<%= image_tag "quartet.png", width: "400px" %>
 
 ```clojure
 (draw (quartet george box man bruce))
@@ -167,15 +168,15 @@ picture transformed by them, each in a quarter of the frame
        george))
 ```
 
-<img src="/images/square-of-four.png" width="500">
+<%= image_tag "square-of-four.png", width: '500px' %>
 
 # We still don't know how to draw anything!
 
 We have thus far treated `draw` as a primitive function and `george`
 as a primitive picture (whatever that means).
 
-Before we get started: a note on [Quil](), a wonderful Clojure(script)
-drawing library.
+Before we get started: a note on [Quil](http://quil.info/), a wonderful
+Clojure(script) drawing library.
 
 We instantiate a 'sketch' as follows, naming it `Escher` and setting
 it's dimensions. It will call a function called `draw-image` to
@@ -262,7 +263,7 @@ functions, now we do a similar thing again.
 A frame is a rectangle, described precisely by an origin vector and 2
 of it's edge vectors.
 
-<img src="/images/frame-diagram.png" width="400">
+<%= image_tag "frame-diagram.png", width: "400px" %>
 
 ```clojure
 {:origin [100 50]
@@ -294,7 +295,7 @@ along each edge of the frame.
              :e2 [0 200]})
 ```
 
-<img src="/images/frame.png" width="500">
+<%= image_tag "frame.png", width: "500px" %>
 
 ```
 (frame-painter frame1)
@@ -344,7 +345,7 @@ Take a look at the drawing below:
 (diag frame1)
 (diag frame2)
 ```
-<img src="/images/diag.png" width="500">
+<%= image_tag "diag.png", width: "500px" %>
 
 We have drawn `frame-painter` again for `frame1` and `frame2`, but we
 have also drawn `diag` for each.
@@ -428,7 +429,7 @@ segments like our pictures so far. They are made using Quil's
 `load-image` function and a function called `image-painter` that you
 have to complete as an exercise.
 
-<img src="/images/bruce.png" width="400">
+<%= image_tag "bruce.png", width: "400px" %>
 
 ## Drawing it
 
@@ -438,7 +439,7 @@ have to complete as an exercise.
 (bruce frame2)
 ```
 
-<img src="/images/image.png" width="500">
+<%= image_tag "image.png", width: "500px" %>
 
 ## Exercise: image-painter
 
@@ -481,7 +482,7 @@ We have all we need to draw Square Limit now, it is just 4 of our
 
 ### Bruce-Finity!
 
-<img src="/images/square-limit-bruce.png" width="500">
+<%= image_tag "square-limit-bruce.png", width: "500px" %>
 
 ```clojure
 (draw (square-limit bruce 4))
@@ -489,7 +490,7 @@ We have all we need to draw Square Limit now, it is just 4 of our
 
 ### Angels
 
-<img src="/images/square-limit-angels.png" width="500">
+<%= image_tag "square-limit-angels.png", width: "500px" %>
 
 ```clojure
 (draw (square-limit angels 4))
