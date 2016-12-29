@@ -166,3 +166,12 @@
 
   %script{src: "https://cdn.polyfill.io/v1/polyfill.min.js"}
   = javascript_include_tag  "all"
+
+  %link{ href: "http://app.klipse.tech/css/codemirror.css", rel: 'stylesheet', type:'text/css' }
+
+  :javascript
+    window.klipse_settings = {
+      selector: 'code.clojure'
+    };
+
+  %script{src:'http://app.klipse.tech/dev/js/klipse_plugin.js'}

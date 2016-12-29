@@ -25,13 +25,12 @@ objects), the usual way to do this with `cons` is depicted below
 
 <img src="/images/fig2.4.png">
 
-```
-> (cons 1
-        (cons 2
-              (cons 3
+```clojure
+(cons 1
+      (cons 2
+            (cons 3
                     (cons 4
                           nil))))
-(1 2 3 4)
 ```
 
 See, the chain of `cons`'s is represented in the REPL as a *list*. You
@@ -40,14 +39,10 @@ have of course seen lists already, expressions are made of them.
 We can create lists using the `list` function, and can `cons` things
 onto the beginning of existing lists.
 
-```
-> (def l1 (list 1 2 3 4))
+```clojure
+(def list1 (list 1 2 3 4))
 
-> l1
-(1 2 3 4)
-
-> (cons 5 l1)
-(5 1 2 3 4)
+(cons 5 list1)
 ```
 
 Be careful not to confuse the expression `(list 1 2 3 4)` with the
