@@ -2,6 +2,20 @@
 title: Welcome to SICP Distilled
 ---
 
+# A note to the reader
+This book is an adaptation of the
+original [SICP Distilled](http://sicpdistilled.com)
+by [Tom Hall](http://www.thattommyhall.com/).
+
+The main thing this fork adds is that almost all Clojure expressions shown in
+the book has been made interactive through the use
+of [KLIPSE](https://github.com/viebel/klipse)
+by [Yehonathan Sharvit](http://blog.klipse.tech/).
+
+If you have any additions or changes you'd like to see in the book, please
+submit
+[an issue on Github](https://github.com/runejuhl/sicpdistilled-interactive/issues).
+
 # SICP Distilled
 ### An idiosyncratic tour of SICP in Clojure
 
